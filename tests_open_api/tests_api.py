@@ -1,10 +1,10 @@
-import json
 import time
 from pprint import pprint
 from random import randint
 
 import requests
 from module import BASE_URL
+
 
 
 def test_update_user_data_by_put():
