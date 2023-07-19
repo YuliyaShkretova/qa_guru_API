@@ -3,7 +3,7 @@ from pprint import pprint
 from random import randint
 
 import requests
-from module import BASE_URL
+from utils.module import BASE_URL
 
 
 
