@@ -1,10 +1,7 @@
-from pprint import pprint
 
-import requests
 from jsonschema import validate
-from curlify import to_curl
 
-from helper import reqres_session, load_json_schema
+from helper import load_json_schema, reqres_session
 
 
 def test_scheme_get_one_user_data():
@@ -54,7 +51,7 @@ def test_scheme_register_200():
 
     schema = load_json_schema('post_register_200.json')
 
-    response = reqres_session.post(url='/register', json={'email':email, 'password': password})
+    response = reqres_session.post(url='/register', json={'email': email, 'password': password})
     assert response.status_code == 200
     validate(instance=response.json(), schema=schema)
 
@@ -62,9 +59,37 @@ def test_scheme_register_200():
 def test_scheme_register_400():
     email = 'eve.holt@reqres.in'
 
-    schema = load_json_schema('post_register_400.json')
+    schema = load_json_schema('post_reg_400.json')
 
     response = reqres_session.post(url='/register', json={'email': email})
     assert response.status_code == 400
     validate(instance=response.json(), schema=schema)
+
+
+def test_scheme_login_400():
+    email = 'peter@klaven'
+
+    schema = load_json_schema('post_reg_400.json')
+
+    response = reqres_session.post(url='/login', json={'email': email})
+    assert response.status_code == 400
+    validate(instance=response.json(), schema=schema)
+
+
+def test_scheme_get_list():
+    schema = load_json_schema('get_list.json')
+
+    response = reqres_session.get(url='/unknown')
+    assert response.status_code == 200
+    validate(instance=response.json(), schema=schema)
+
+
+def test_scheme_single():
+    id = 2
+    schema = load_json_schema('get_single.json')
+
+    response = reqres_session.get(url='/unknow/', params={'id': id})
+    assert response.status_code == 200
+    validate(instance=response.json(), schema=schema)
+
 
