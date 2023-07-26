@@ -25,6 +25,8 @@ def test_scheme_create_new_user():
     response_code, response_schema = ApiResponse.extract_response_data(response)
     ApiResponse.validate_response_status(response_code, 201)
     ApiResponse.validate_response_schema(response_schema, schema)
+    assert response.json()['name'] == 'nameee'
+    assert response.json()['job'] == 'jooob'
 
 
 @allure.tag("function")
@@ -43,6 +45,9 @@ def test_scheme_patch_user():
     response_code, response_schema = ApiResponse.extract_response_data(response)
     ApiResponse.validate_response_status(response_code, 200)
     ApiResponse.validate_response_schema(response_schema, schema)
+
+    assert response.json()['name'] == '111'
+    assert response.json()['job'] == 'new york'
 
 
 @allure.tag("function")
