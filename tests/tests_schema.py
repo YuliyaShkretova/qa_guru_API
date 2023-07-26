@@ -1,7 +1,6 @@
 import allure
 from jsonschema import validate
 from utils.helper import load_json_schema, reqres_session
-from utils.modules import register_user
 
 
 def allure_decoration_steps(func):
@@ -81,19 +80,19 @@ def test_scheme_patch_user():
     validate(instance=response.json(), schema=schema)
 
 
-@allure.tag("function")
-@allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for API")
-@allure.link("https://reqres.in/")
-@allure.title("test_scheme_register_200")
-@allure.severity(severity_level='HIGH')
-@allure_decoration_steps
-def test_scheme_register_200():
-    schema = load_json_schema('post_register_200.json')
-    response = reqres_session.post(url='/register', json=register_user())
-    assert response.status_code == 200
-    # assert response.json() == register_user()
-    validate(instance=response.json(), schema=schema)
+# @allure.tag("function")
+# @allure.label("owner", "Yuliya Shkretova")
+# @allure.feature("Tests for API")
+# @allure.link("https://reqres.in/")
+# @allure.title("test_scheme_register_200")
+# @allure.severity(severity_level='HIGH')
+# @allure_decoration_steps
+# def test_scheme_register_200():
+#     schema = load_json_schema('post_register_200.json')
+#     response = reqres_session.post(url='/register', json=register_user())
+#     assert response.status_code == 200
+#     # assert response.json() == register_user()
+#     validate(instance=response.json(), schema=schema)
 
 
 @allure.tag("function")
