@@ -17,7 +17,7 @@ The project is integrated with Jenkins for continuous integration. Jenkins is re
 Jenkins Job URL:
 _https://jenkins.autotests.cloud/job/UI_diplom/_
 
-![Alt текст](resource/jenkins.png)
+![Alt текст](resource/jenkins_api.png)
 
 
 ## **Allure Test Report**
@@ -27,7 +27,7 @@ The project uses Allure Test Report for generating comprehensive and interactive
 Allure Test Report in Jenkins: 
 _https://jenkins.autotests.cloud/job/UI_diplom/38/allure/_
 
-![Alt текст](resource/allure_main.png)  ![Alt текст](resource/allure_case.png)
+![Alt текст](resource/allure_api_main.png)  ![Alt текст](resource/allure_api_details.png)
 
 
 ## **Allure TestOps**
@@ -36,7 +36,7 @@ The project may be integrated with Allure TestOps for test management, storing t
 Allure TestOps Project:
 _https://allure.autotests.cloud/project/3536/dashboards_
 
-![Alt текст](resource/allure_TO_total.png)      ![Alt текст](resource/allure_TO_cases.png)
+![Alt текст](resource/allure_TO_main_API.png)      ![Alt текст](resource/allure_TO_details_API.png)
 
 
 
@@ -48,7 +48,7 @@ The project is integrated with Jira for issue tracking and project management. J
 Jira Task:
 _https://jira.autotests.cloud/browse/HOMEWORK-817_
 
-![Alt текст](resource/jira_task.png)
+![Alt текст](resource/jira_task_api.png)
 
 ## **Notification in Telegram**
 
@@ -56,4 +56,4 @@ The project uses Telegram for receiving notifications about the test execution s
 
 Screenshot of Telegram Notification:
 
-![Alt текст](resource/tg_notification.png)
+![Alt текст](resource/tg_api.png)
