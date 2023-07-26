@@ -4,7 +4,6 @@ import os.path
 
 import allure
 import curlify
-from allure import step
 from allure_commons.types import AttachmentType
 from requests import Session, Response
 
@@ -38,3 +37,6 @@ class CustomSession(Session):
 
 
 reqres_session = CustomSession('https://reqres.in/api')
+
+
+
