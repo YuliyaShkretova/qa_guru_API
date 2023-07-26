@@ -83,6 +83,7 @@ def test_scheme_get_list():
     ApiResponse.validate_response_status(response_code, 200)
     ApiResponse.validate_response_schema(response_schema, schema)
 
+
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
 @allure.feature("Tests for API")
