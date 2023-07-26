@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "API_diplom",
+    "environment": "base env",
+    "comment": "API dipoma tests",
+    "reportLink": "https://jenkins.autotests.cloud/job/UI_diplom/",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "tests/allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5950006256:AAFblHzNvE3spB7mKZcT22fvm41CHnfl010",
+    "chat": "290460100",
+    "replyTo": ""
+  }
+}

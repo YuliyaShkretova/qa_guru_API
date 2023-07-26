@@ -26,7 +26,7 @@ class CustomSession(Session):
         status_code = response.status_code
         total_data = f"'HTTP Status: {status_code} {curl}'"
         logging.info(total_data)
-        with step(f'{method} {url}'):
+        with allure.step(f'{method} {url}'):
             if response.text is not None:
                 allure.attach(body=total_data, name="Request curl", attachment_type=AttachmentType.TEXT,
                               extension='txt')
