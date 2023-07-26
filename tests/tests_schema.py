@@ -1,7 +1,8 @@
 import allure
 from jsonschema import validate
 from utils.helper import load_json_schema, reqres_session
-from utils.modules import register_user, ApiTest
+from utils.modules import register_user
+
 
 def allure_decoration_steps(func):
     def wrapper(*args, **kwargs):
@@ -12,7 +13,7 @@ def allure_decoration_steps(func):
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_get_one_user_data")
 @allure.severity(severity_level='HIGH')
@@ -29,7 +30,7 @@ def test_scheme_get_one_user_data():
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_create_new_user")
 @allure.severity(severity_level='HIGH')
@@ -48,7 +49,7 @@ def test_scheme_create_new_user():
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_delete_user")
 @allure.severity(severity_level='HIGH')
@@ -64,7 +65,7 @@ def test_scheme_delete_user():
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_patch_user")
 @allure.severity(severity_level='HIGH')
@@ -82,7 +83,7 @@ def test_scheme_patch_user():
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_register_200")
 @allure.severity(severity_level='HIGH')
@@ -97,7 +98,7 @@ def test_scheme_register_200():
 
 @allure.tag("function")
 @allure.label("owner", "Yuliya Shkretova")
-@allure.feature("Tests for DEMO_QA")
+@allure.feature("Tests for API")
 @allure.link("https://reqres.in/")
 @allure.title("test_scheme_register_400")
 @allure.severity(severity_level='HIGH')
