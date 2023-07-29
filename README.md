@@ -1,4 +1,4 @@
-# **Project Name: UI testing**
+# **Project Name: API testing**
 This repository contains the code for API automated tests for https://reqres.in/. The project is part of a testing and automation course and aims to demonstrate the usage of received knowledge.
 
 ## **Technologies and Tools Used** 
@@ -20,7 +20,7 @@ _https://jenkins.autotests.cloud/job/API_diplom/_
 ![Alt текст](resource/jenkins_api.png)
 
 
-## **Allure Test Report**
+## **Allure Report**
 
 The project uses Allure Test Report for generating comprehensive and interactive test reports. Allure Test Report provides detailed information about test execution, including test steps, attachments, and historical data.
 
@@ -40,9 +40,8 @@ _https://allure.autotests.cloud/project/3568/dashboards_
 
 
 
-## **Allure TestOps Project:**
+## **Jira Integration:**
 
-Jira Integration
 The project is integrated with Jira for issue tracking and project management. Jira allows for efficient tracking of bugs, tasks, and improvements related to the testing process.
 
 Jira Task:
